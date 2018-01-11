@@ -42,11 +42,11 @@
                         </a>
                     </li>
                     <% } %>
-                    <% if(theme.instagram_url) { %>
+                    <% if(theme.weixin_url) { %>
                     <li class="list-inline-item">
-                        <a href="<%- theme.instagram_url %>">
+                        <a href="<%- theme.weixin_url %>">
                             <span class="footer-icon-container">
-                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-weixin"></i>
                             </span>
                         </a>
                     </li>
@@ -112,6 +112,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="footer-copyright">
                     <%- theme.footer_copyright %>
+                </div>
+                <div class="powered-by">
+                    <i class="fa fa-users"></i>
+                    <span id="busuanzi_container_site_uv">
+                        本站访客数: <span id="busuanzi_value_site_uv"></span>
+                    </span> |
+                    <i class="fa fa-user-md"></i>
+                    <span class="post-count">博客全站共<%= totalcount(site) %>字</span>
                 </div>
             </div>
         </div>

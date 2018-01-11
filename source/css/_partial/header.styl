@@ -9,6 +9,17 @@ header
       font-size 60px
       color $mainColor1
       text-shadow $titleTextShadow
+      /* 设置循环动画 [animation: (play)动画名称 (2s)动画播放时长单位秒或微秒 (ase-out)动画播放的速度曲线为以低速结束 
+      (1s)等待1秒然后开始动画 (1)动画播放次数(infinite为循环播放) ]*/
+      animation: play 2s ease-out 1s 1
+      /* 鼠标经过旋转360度 */
+      -webkit-transition: -webkit-transform 1.0s ease-out;
+      -moz-transition: -moz-transform 1.0s ease-out;
+      transition: transform 1.0s ease-out;
+    .logo-icon:hover
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
     img
       width 100px
       height 100px
@@ -18,3 +29,20 @@ header
       color $mainColor1
       font-family $fontTitle
       text-shadow $titleTextShadow
+
+/* Z 轴旋转动画 */
+@-webkit-keyframes play
+  0%
+    -webkit-transform: rotateZ(0deg)
+  100%
+    -webkit-transform: rotateZ(-360deg)
+@-moz-keyframes play
+  0%
+    -moz-transform: rotateZ(0deg)
+  100%
+    -moz-transform: rotateZ(-360deg)
+@keyframes play
+  0%
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(-360deg)

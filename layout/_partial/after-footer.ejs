@@ -8,8 +8,18 @@
 <!-- Gallery -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
+<!-- Busuanzi UV -->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <!-- Custom JavaScript -->
 <%- js('js/main.js') %>
+<%- js('js/love.js') %>
+<% if(theme.fireworks) { %>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <%- js('js/firework.js') %>
+<% } %>
+<%- live2d() %>
 
 <!-- Disqus Comments -->
 <% if (theme.comments && theme.comments.disqus_shortname){ %>

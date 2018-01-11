@@ -1,9 +1,14 @@
 section.main
-  color: $mainColor1
+  color $mainColor1
   .post
-    margin-top: 200px
+    margin-top 200px
     @media $xs
       margin-top 60px
+    padding 25px
+    border-radius 20px
+    -webkit-box-shadow -30px 20px 100px rgba(202, 203, 203, .3)
+    -moz-box-shadow -30px 20px 100px rgba(202, 203, 203, .3)
+    box-shadow -30px 20px 100px rgba(202, 203, 203, .3)
     .post-header
       position relative
       width 100%
@@ -18,7 +23,7 @@ section.main
         border-left 1px solid $mainColor1
         border-bottom 1px solid $mainColor1
         border-top 1px solid $mainColor1
-        transition: left 0.3s ease
+        transition left 0.3s ease
         @media $xs
           display none
       &:after
@@ -27,36 +32,36 @@ section.main
         padding 5px
         top -10px
         bottom -10px
-        right -5px
+        right 10px
         border-right 1px solid $mainColor1
         border-bottom 1px solid $mainColor1
         border-top 1px solid $mainColor1
-        transition: right 0.3s ease
+        transition right 0.3s ease
         @media $xs
           display none
       h1.title
-        text-align: center
-        font-family: $fontTitle
-        text-shadow: $titleTextShadow
+        text-align center
+        font-family $fontTitle
+        text-shadow $titleTextShadow
         cursor pointer
         a, a:link, a:visited, a:active
           border-bottom none
         @media $xs
            font-size 2.5em
       .post-info
-        margin-top: 15px
-        text-align: center
-        text-transform: uppercase
-        font-family: $fontTitle
+        margin-top 15px
+        text-align center
+        text-transform uppercase
+        font-family $fontTitle
         span
-          padding: 10px
+          padding 10px
       &.hover
         &:before
           left 5px
         &:after
-          right 5px
+          right 20px
     .content
-      margin-top: 65px
+      margin-top 65px
       @media $xs
         margin-top 40px
         text-align justify
@@ -81,7 +86,7 @@ section.main
               padding-right 20px
               width 100%
     .read-more
-      margin: 10px auto
+      margin 10px auto
       font-family $fontTitle
       text-transform uppercase
     .comments
@@ -90,8 +95,8 @@ section.main
          margin-top 60px
    .post-tags
      margin-top 60px
-     text-transform: uppercase
-     font-family: $fontTitle
+     text-transform uppercase
+     font-family $fontTitle
      a, i
        margin-right 15px
 

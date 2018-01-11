@@ -55,6 +55,8 @@
     <% if(theme.twitter_handle) { %>
         <meta name="twitter:site" content="<%= theme.twitter_handle %>>" />
     <% } %>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet" />
 
     <!-- Title -->
     <%
@@ -89,8 +91,42 @@
 
     <!-- Custom CSS -->
     <%- css('css/style.css') %>
+    <style>
+        .pace .pace-progress {
+            background: #66CCFF; /*进度条颜色*/
+            height: 3px;
+        }
+        .pace .pace-progress-inner {
+            box-shadow: 0 0 10px #66CCFF, 0 0 5px     #66CCFF; /*阴影颜色*/
+        }
+        .pace .pace-activity {
+            border-top-color: #66CCFF;    /*上边框颜色*/
+            border-left-color: #66CCFF;    /*左边框颜色*/
+        }
+    </style>
 
-    <!-- Google Analytics -->
-    <%- partial('google-analytics') %>
-
+    <!-- Custom JS -->
+    <% if(page.password) { %>
+        <script>
+            (function(){
+                if (prompt('请输入文章密码') !== '<%= page.password %>'){
+                    alert('密码错误！');
+                    if (history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = 'http://dscdtc.ml/';
+                    }
+                }
+            })();
+        </script>
+    <% } %>
+    <% if(theme.daovoiceid) { %>
+        <script>
+            (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/<%= theme.daovoiceid %>.js","daovoice")
+            daovoice('init', {
+                app_id: "<%= theme.daovoiceid %>"
+            });
+            daovoice('update');
+        </script>
+    <% } %>
 </head>
