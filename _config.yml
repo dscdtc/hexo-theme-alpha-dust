@@ -50,3 +50,13 @@ fireworks: true
 
 # Daovoice Online contact
 daovoiceid: 771b3406
+
+# --------------------------------------------------------------
+# background settings
+# --------------------------------------------------------------
+# add canvas-nest effect
+# see detail from https://github.com/hustcc/canvas-nest.js
+canvas_nest: true
+
+# Baidu Site Verify
+baidu_verification: true
