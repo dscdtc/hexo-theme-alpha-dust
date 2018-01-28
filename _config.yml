@@ -58,5 +58,5 @@ daovoiceid: 771b3406
 # see detail from https://github.com/hustcc/canvas-nest.js
 canvas_nest: true
 
-# Baidu Site Verify
-baidu_verification: true
+# 百度主动推送
+baidu_push: true
